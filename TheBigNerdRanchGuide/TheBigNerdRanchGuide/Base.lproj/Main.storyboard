@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +13,55 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TheBigNerdRanchGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7Y-4D-50W">
+                                <rect key="frame" x="194.66666666666666" y="120" width="25" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJB-eI-9uB">
+                                <rect key="frame" x="194.66666666666666" y="281" width="25" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kgy-Kc-Hmm">
+                                <rect key="frame" x="160.66666666666666" y="312" width="93" height="30"/>
+                                <state key="normal" title="Show Answer"/>
+                                <connections>
+                                    <action selector="onTapAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vfM-qb-m8B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7F-Yr-9N3">
+                                <rect key="frame" x="158" y="151" width="98" height="30"/>
+                                <state key="normal" title="Next Question"/>
+                                <connections>
+                                    <action selector="onTapQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CQM-rF-MRE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RJB-eI-9uB" firstAttribute="top" secondItem="E7F-Yr-9N3" secondAttribute="bottom" constant="100" id="2ds-p8-RNg"/>
+                            <constraint firstItem="s7Y-4D-50W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8MG-eF-GBY"/>
+                            <constraint firstItem="E7F-Yr-9N3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DpQ-bx-hCp"/>
+                            <constraint firstItem="RJB-eI-9uB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JvK-3p-UBk"/>
+                            <constraint firstItem="Kgy-Kc-Hmm" firstAttribute="top" secondItem="RJB-eI-9uB" secondAttribute="bottom" constant="10" id="NXl-AB-s3R"/>
+                            <constraint firstItem="E7F-Yr-9N3" firstAttribute="top" secondItem="s7Y-4D-50W" secondAttribute="bottom" constant="10" id="Oe4-cl-ux3"/>
+                            <constraint firstItem="s7Y-4D-50W" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="PyF-Ma-f6c"/>
+                            <constraint firstItem="Kgy-Kc-Hmm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rca-dw-Y4b"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="RJB-eI-9uB" id="ZgF-oq-UVd"/>
+                        <outlet property="questLabel" destination="s7Y-4D-50W" id="SAS-zp-ZDv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
