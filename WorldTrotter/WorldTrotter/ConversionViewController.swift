@@ -2,7 +2,7 @@
 //  ConversionViewController.swift
 //  WorldTrotter
 //
-//  Created by iMacbook on 5/10/19.
+//  Created by iMacbook on 5/20/19.
 //  Copyright © 2019 IOTLink. All rights reserved.
 //
 
@@ -15,6 +15,5 @@ class ConversionViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
 
 }
